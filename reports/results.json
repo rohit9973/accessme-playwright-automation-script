@@ -1,0 +1,643 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\enveu\\OneDrive\\Desktop\\Accessme_automation\\playwright.config.js",
+    "rootDir": "C:/Users/enveu/OneDrive/Desktop/Accessme_automation/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/enveu/OneDrive/Desktop/Accessme_automation/reports/test-artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/enveu/OneDrive/Desktop/Accessme_automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/enveu/OneDrive/Desktop/Accessme_automation/reports/test-artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/enveu/OneDrive/Desktop/Accessme_automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "C:\\Users\\enveu\\OneDrive\\Desktop\\Accessme_automation\\utils\\reporter.js",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "login.spec.js",
+      "file": "login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "✅ Login | Positive Scenarios",
+          "file": "login.spec.js",
+          "line": 23,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[LP-01]  Valid login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16070,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:24:44 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:24:56 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:24:56 \u001b[32minfo\u001b[39m: \u001b[32mLogging in → sanjaydebnath076@gmail.com\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:24:56 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Email\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:24:56 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Password\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:24:59 \u001b[32minfo\u001b[39m: \u001b[32mLogin success → redirected to: https://app.access.me/\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:24:59 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LP-01]  Valid login\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:54:44.259Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-494cd487ce07266917dc",
+              "file": "login.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "[LP-02] Login using Enter key",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14079,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:25:00 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:10 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:10 \u001b[32minfo\u001b[39m: \u001b[32mLogging in → sanjaydebnath076@gmail.com\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:10 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Email\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:10 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Password\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:13 \u001b[32minfo\u001b[39m: \u001b[32mLogin success → redirected to: https://app.access.me/\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:13 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LP-02] Login using Enter key\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:55:00.473Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-00033442ac4292eb667d",
+              "file": "login.spec.js",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "[LP-03] Password visibility toggle",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8687,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:25:14 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:22 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:22 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LP-03] Password visibility toggle\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:55:14.583Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-0526b27001428f14ebb6",
+              "file": "login.spec.js",
+              "line": 48,
+              "column": 3
+            },
+            {
+              "title": "[LP-04] Forgot password navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8355,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:25:23 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:31 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:31 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LP-04] Forgot password navigation\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:55:23.308Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-d952c7a00805b1658edd",
+              "file": "login.spec.js",
+              "line": 56,
+              "column": 3
+            },
+            {
+              "title": "[LP-05] Sign up navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8916,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:25:31 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:39 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:40 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LP-05] Sign up navigation\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:55:31.701Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-d4554e58d36276ae7e29",
+              "file": "login.spec.js",
+              "line": 62,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "❌ Login | Negative Scenarios",
+          "file": "login.spec.js",
+          "line": 75,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[LN-06] Wrong password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9398,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:25:40 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:48 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:48 \u001b[32minfo\u001b[39m: \u001b[32mLogging in → sanjaydebnath076@gmail.com\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:48 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Email\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:48 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Password\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:49 \u001b[33mwarn\u001b[39m: \u001b[33mError → \"Username or Password doesn't match.\"\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:49 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LN-06] Wrong password\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:55:40.672Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-637cafa6179ce59738cb",
+              "file": "login.spec.js",
+              "line": 78,
+              "column": 5
+            },
+            {
+              "title": "[LN-07] Non-existent email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10552,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:25:50 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:59 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:59 \u001b[32minfo\u001b[39m: \u001b[32mLogging in → test@nomail.com\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:59 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Email\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:25:59 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Password\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:00 \u001b[33mwarn\u001b[39m: \u001b[33mError → \"User with this email id does not exist.\"\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:00 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LN-07] Non-existent email\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:55:50.119Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-701ef96f42e3926af87d",
+              "file": "login.spec.js",
+              "line": 78,
+              "column": 5
+            },
+            {
+              "title": "[LN-08] Empty email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16538,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:26:00 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:16 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:16 \u001b[32minfo\u001b[39m: \u001b[32mLogging in → empty\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:16 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Email\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:16 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Password\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:16 \u001b[33mwarn\u001b[39m: \u001b[33mError → \"Enter a valid email address format. eg: example@email.com\"\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:16 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LN-08] Empty email\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:56:00.720Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-2366c87932d30a7463f0",
+              "file": "login.spec.js",
+              "line": 78,
+              "column": 5
+            },
+            {
+              "title": "[LN-09] Empty password",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15027,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:26:17 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:31 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:31 \u001b[32minfo\u001b[39m: \u001b[32mLogging in → sanjaydebnath076@gmail.com\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:31 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Email\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:31 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Password\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:31 \u001b[33mwarn\u001b[39m: \u001b[33mError → \"Password is required\"\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:31 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LN-09] Empty password\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:56:17.298Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-64b45397bedb7cf55513",
+              "file": "login.spec.js",
+              "line": 78,
+              "column": 5
+            },
+            {
+              "title": "[LN-10] Malformed email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7610,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "22:26:32 \u001b[32minfo\u001b[39m: \u001b[32mNavigating → https://app.access.me/signin\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:39 \u001b[32minfo\u001b[39m: \u001b[32mLogin page loaded\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:39 \u001b[32minfo\u001b[39m: \u001b[32mLogging in → bad@@format\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:39 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Email\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:39 \u001b[34mdebug\u001b[39m: \u001b[34mFilling Password\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:39 \u001b[33mwarn\u001b[39m: \u001b[33mError → \"Enter a valid email address format. eg: example@email.com\"\u001b[39m\r\n"
+                        },
+                        {
+                          "text": "22:26:39 \u001b[32minfo\u001b[39m: \u001b[32m✅ PASSED → [LN-10] Malformed email\u001b[39m\r\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-14T16:56:32.353Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-f6edaacf3ce52ce6da33",
+              "file": "login.spec.js",
+              "line": 78,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-14T16:54:43.129Z",
+    "duration": 117009.656,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

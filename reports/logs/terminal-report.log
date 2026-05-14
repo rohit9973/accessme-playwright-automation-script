@@ -1,0 +1,43 @@
+
+┌──────────────────────────────────────────────────────────────┐
+│         🚀 ACCESS.ME AUTOMATION EXECUTION STARTED 🚀         │
+└──────────────────────────────────────────────────────────────┘
+
+  Total Tests : 10
+  Browser     : chromium
+  Workers     : 1
+  Started At  : 10:24:43 pm
+
+ PASS   CHROMIUM  Valid login (16.07s)
+ PASS   CHROMIUM  Login using Enter key (14.08s)
+ PASS   CHROMIUM  Password visibility toggle (8.69s)
+ PASS   CHROMIUM  Forgot password navigation (8.36s)
+ PASS   CHROMIUM  Sign up navigation (8.92s)
+ PASS   CHROMIUM  Wrong password (9.40s)
+ PASS   CHROMIUM  Non-existent email (10.55s)
+ PASS   CHROMIUM  Empty email (16.54s)
+ PASS   CHROMIUM  Empty password (15.03s)
+ PASS   CHROMIUM  Malformed email (7.61s)
+
+            🚀 FINAL AUTOMATION EXECUTION REPORT 🚀            
+
+┌────────────────────────┬──────────┬──────────┬──────────┬──────────┬───────────────┐
+│ PAGE NAME              │ TOTAL    │ PASS     │ FAIL     │ SKIP     │ BROWSER       │
+├────────────────────────┼──────────┼──────────┼──────────┼──────────┼───────────────┤
+│ LOGIN PAGE             │ 10       │ 10       │ 0        │ 0        │ chromium      │
+└────────────────────────┴──────────┴──────────┴──────────┴──────────┴───────────────┘
+
+ ✅ ALL TESTS PASSED SUCCESSFULLY 
+
+ ✔ PASSED : 10     ✖ FAILED : 0     ⚠ SKIPPED : 0     ⏱ TOTAL TIME : 117.02s
+
+                  EXECUTION SUMMARY                  
+
+ Total Time   : 117.02s
+ Average/Test : 11.70s
+ Slowest Test : Empty email (16.54s)
+ Fastest Test : Malformed email (7.61s)
+
+ HTML Report : npm run report
+ Log File    : reports/logs/terminal-report.log
+

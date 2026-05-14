@@ -1,6 +1,7 @@
-// utils/reporter.js
+
 
 import chalk from 'chalk';
+import Table from 'cli-table3';
 import { createWriteStream, mkdirSync, existsSync } from 'fs';
 
 if (!existsSync('reports/logs')) {
@@ -297,83 +298,46 @@ export default class Reporter {
 
     log('');
 
-    const top =
-    '┌──────────────────────┬──────────┬──────────┬──────────┬──────────┬───────────────┐';
-
-    const mid =
-    '├──────────────────────┼──────────┼──────────┼──────────┼──────────┼───────────────┤';
-
-    const bottom =
-    '└──────────────────────┴──────────┴──────────┴──────────┴──────────┴───────────────┘';
-
-    log(chalk.cyan(top));
-
-    log(
-      chalk.bgBlue.white.bold(
-        '│ ' +
-        pad('PAGE NAME', 20) + ' │ ' +
-        pad('TOTAL', 6) + ' │ ' +
-        pad('PASS', 6) + ' │ ' +
-        pad('FAIL', 6) + ' │ ' +
-        pad('SKIP', 6) + ' │ ' +
-        pad('BROWSER', 11) + ' │'
-      )
-    );
-
-    log(chalk.cyan(mid));
+    // ── cli-table3 replaces the manual box-drawing table ──────────────
+    const table = new Table({
+      head: [
+        chalk.bgBlue.white.bold('PAGE NAME'),
+        chalk.bgBlue.white.bold('TOTAL'),
+        chalk.bgBlue.white.bold('PASS'),
+        chalk.bgBlue.white.bold('FAIL'),
+        chalk.bgBlue.white.bold('SKIP'),
+        chalk.bgBlue.white.bold('BROWSER'),
+      ],
+      colWidths: [24, 10, 10, 10, 10, 15],
+      style: {
+        border: ['cyan'],
+        head: [],
+      },
+    });
 
     for (const [module, data] of Object.entries(grouped)) {
 
-      const failColor =
+      const failCell =
         data.failed > 0
-          ? chalk.red.bold
-          : chalk.green.bold;
+          ? chalk.red.bold(String(data.failed))
+          : chalk.green.bold(String(data.failed));
 
-      log(
-
-        chalk.white('│ ') +
-
-        chalk.yellow.bold(
-          pad(module, 20)
-        ) +
-
-        chalk.white(' │ ') +
-
-        chalk.cyan.bold(
-          pad(data.total, 6)
-        ) +
-
-        chalk.white(' │ ') +
-
-        chalk.green.bold(
-          pad(data.passed, 6)
-        ) +
-
-        chalk.white(' │ ') +
-
-        failColor(
-          pad(data.failed, 6)
-        ) +
-
-        chalk.white(' │ ') +
-
-        chalk.yellow.bold(
-          pad(data.skipped, 6)
-        ) +
-
-        chalk.white(' │ ') +
-
-        chalk.blue.bold(
-          pad(data.browser, 11)
-        ) +
-
-        chalk.white(' │')
-      );
-
-      log(chalk.cyan(mid));
+      table.push([
+        chalk.yellow.bold(module),
+        chalk.cyan.bold(String(data.total)),
+        chalk.green.bold(String(data.passed)),
+        failCell,
+        chalk.yellow.bold(String(data.skipped)),
+        chalk.blue.bold(data.browser),
+      ]);
     }
 
-    log(chalk.cyan(bottom));
+    // log each line of the table through our log() helper
+    // so it also lands in the log file (stripped of colour)
+    for (const line of table.toString().split('\n')) {
+      log(line);
+    }
+    // ─────────────────────────────────────────────────────────────────
 
     log('');
 

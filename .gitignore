@@ -1,33 +1,11 @@
+# Node
+node_modules/
 
 # Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
 
-# Reports
-reports/
-screenshots/
-videos/
-trace/
 
-# Logs
-*.log
-npm-debug.log*
-
-# Environment files
-.env
-.env.*
-
-# OS / Editor files
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# Temporary files
-*.tmp

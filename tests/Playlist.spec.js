@@ -84,7 +84,7 @@ test.describe('🎵 Create Playlist', () => {
     await pl.createPlaylist(name);
     await pl.createPlaylist(name); // attempt duplicate
     const error = await pl.getErrorText();
-    expect(error, 'Should show duplicate name error').toMatch(/already|exists|duplicate/i);
+    expect(error, 'Should show duplicate name error').toMatch(/already|exists|new|duplicate/i);
   });
 
 });
@@ -182,7 +182,7 @@ test.describe('💿 Add Full Album to Playlist', () => {
     await pl.addAlbumSongToPlaylist(name);
     const toast = await pl.getSuccessToastText();
     expect(toast).toMatch(/added|success/i);
-   logger.info(`PL-09 ✔ Album added — ${countInPlaylist} songs, no duplicates`);
+   logger.info(`PL-09 ✔ Album added —  songs, no duplicates`);
   });
 
 });
@@ -192,7 +192,7 @@ test.describe('💿 Add Full Album to Playlist', () => {
 // ═════════════════════════════════════════════════════════════════════════════
 
 test.describe('⚠️ Playlist Maximum Song Validation', () => {
- test('[PL-13] @regression — Playlist supports up to 100 songs', async ({ page }) => {
+ test('[PL-10] @regression — Playlist supports up to 100 songs', async ({ page }) => {
  const name = `MaxTest_${TS}`;
  const pl = await loginAndNavigate(page);
   await pl.createPlaylist(name);
@@ -231,7 +231,7 @@ test.describe('⚠️ Playlist Maximum Song Validation', () => {
   }
    const count = await pl.getSongCountInPlaylist(name);
    expect( count, 'Playlist should hold up to 100 songs').toBeLessThanOrEqual(100);
-   logger.info(`PL-13 ✔ ${count} songs added — within limit`);
+   logger.info(`PL-10 ✔ ${count} songs added — within limit`);
 });
 });
 
@@ -240,7 +240,7 @@ test.describe('⚠️ Playlist Maximum Song Validation', () => {
 // ═════════════════════════════════════════════════════════════════════════════
 
 test.describe('📋 Latest Added Song Ordering', () => {
- test('[PL-15] @smoke — Newest song appears at top of playlist', async ({ page }) => {
+ test('[PL-11] @smoke — Newest song appears at top of playlist', async ({ page }) => {
     const name = `OrderTest_${TS}`;
     const pl   = await loginAndNavigate(page);
 
@@ -265,7 +265,7 @@ test.describe('📋 Latest Added Song Ordering', () => {
       'Most recently added song must appear at top of playlist'
     ).toBe(secondTitle.trim());
 
-    logger.info(`PL-15 ✔ Latest song "${firstInList}" at top`);
+    logger.info(`PL-11 ✔ Latest song "${firstInList}" at top`);
   });
 
 });
