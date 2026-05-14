@@ -48,7 +48,7 @@ export default defineConfig({
       name: 'firefox',
       use: {
         browserName:       'firefox',
-        headless:          false,
+        headless:          true,
         viewport:          null,
         deviceScaleFactor: undefined,
         launchOptions: { args: ['-width', '1920', '-height', '1080'] },
