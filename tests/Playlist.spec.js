@@ -1,7 +1,7 @@
 
 import { test, expect } from '@playwright/test';
 import { LoginPage }    from '../pages/LoginPage.js';
-import { PlaylistPage } from '../pages/PlaylistPage.js';
+import { Playlistpage } from '../pages/Playlistpage.js';
 import testData         from '../Utils/dataHelper.js';
 import logger           from '../Utils/logger.js';
 
@@ -20,7 +20,7 @@ async function loginAndNavigate(page) {
   await login.open();
   await login.login(EMAIL, PASS);
   await login.isLoggedIn();
-  const pl = new PlaylistPage(page);
+  const pl = new Playlistpage(page);
   //  await pl.goToPlaylistSection();
   return pl;
 }
@@ -35,7 +35,7 @@ test.beforeEach(async ({ page }, testInfo) => {
 
 test.afterEach(async ({ page }, testInfo) => {
   if (testInfo.status === 'failed') {
-    const pl = new PlaylistPage(page);
+    const pl = new Playlistpage(page);
     await pl.screenshot(`FAIL_${testInfo.title.replace(/[^a-z0-9]/gi, '_').slice(0, 60)}`);
     logger.error(`✖ FAILED [${testInfo.title}] — ${testInfo.error?.message?.split('\n')[0] ?? ''}`);
   } else if (testInfo.status === 'passed') {
@@ -45,7 +45,7 @@ test.afterEach(async ({ page }, testInfo) => {
 
 // ═════════════════════════════════════════════════════════════════════════════
 // 1. CREATE PLAYLIST
-// ═════════════════════════════════════════════════════════════════════════════
+// ════════════════════════════════
 
 test.describe('🎵 Create Playlist', () => {
 

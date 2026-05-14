@@ -9,7 +9,7 @@ import { BasePage } from './BasePage.js';
 import logger       from '../Utils/logger.js';
 import { expect }   from '@playwright/test';
 
-export class PlaylistPage extends BasePage {
+export class Playlistpage extends BasePage {
   constructor(page) {
     super(page);
     this.page = page;
