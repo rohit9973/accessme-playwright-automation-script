@@ -10,7 +10,7 @@ export default defineConfig({
   workers:        1,
 
   reporter: [
-    ['./utils/reporter.js'],
+    // ['./utils/reporter.js'],
     ['html', { outputFolder: 'reports/html', open: 'never' }],
     ['json', { outputFile: 'reports/results.json' }],
   ],
