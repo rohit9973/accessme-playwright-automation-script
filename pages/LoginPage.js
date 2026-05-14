@@ -1,7 +1,7 @@
 // pages/LoginPage.js
 
 import { BasePage } from './BasePage.js';
-import logger from '../utils/logger.js';
+import logger from '../Utils/logger.js';
 
 export class LoginPage extends BasePage {
   constructor(page) {

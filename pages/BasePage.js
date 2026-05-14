@@ -1,7 +1,7 @@
 // pages/BasePage.js
 // Shared helpers used by every page object
 
-import logger from '../utils/logger.js';
+import logger from '../Utils/logger.js';
 import path from 'path';
 import fs from 'fs';
 

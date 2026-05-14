@@ -1,8 +1,8 @@
 
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage.js';
-import testData      from '../utils/dataHelper.js';
-import logger        from '../utils/logger.js';
+import testData      from '../Utils/dataHelper.js';
+import logger        from '../Utils/logger.js';
 
 test.beforeEach(async ({ page }) => {
   const login = new LoginPage(page);

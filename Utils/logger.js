@@ -1,8 +1,4 @@
-// utils/logger.js
-// ─── Industry-grade real-time logger using Winston ────────────────
-// Logs to console (colorized) + file simultaneously.
-// Usage: import logger from '../utils/logger.js';
-//        logger.info('message', { key: 'value' });
+
 
 import { createLogger, format, transports } from 'winston';
 import { fileURLToPath } from 'url';
