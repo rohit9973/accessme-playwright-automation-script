@@ -1,0 +1,139 @@
+{
+  "credentials": {
+    "email":    "sanjaydebnath076@gmail.com",
+    "password": "test@123"
+  },
+
+  "login": {
+      "positive": [
+  { "id": "LP-01", "description": "Valid login", "type": "login" },
+  { "id": "LP-02", "description": "Login using Enter key", "type": "enter" },
+  { "id": "LP-03", "description": "Password visibility toggle", "type": "toggle" },
+  { "id": "LP-04", "description": "Forgot password navigation", "type": "forgot" },
+  { "id": "LP-05", "description": "Sign up navigation", "type": "signup" }
+],
+
+ "negative": [
+      {
+        "id": "LN-06",
+        "description": "Wrong password",
+        "password": "WrongPass!999",
+        "expectedError": ["invalid", "incorrect", "wrong","doesn't match"]
+      },
+      {
+        "id": "LN-07",
+        "description": "Non-existent email",
+        "email": "test@nomail.com",
+        "expectedError": ["invalid", "not found", "exist"]
+      },
+      {
+        "id": "LN-08",
+        "description": "Empty email",
+        "email": "",
+       "expectedError": ["required", "valid email", "format"]
+      },
+      {
+        "id": "LN-09",
+        "description": "Empty password",
+        "password": "",
+        "expectedError": ["required", "enter password"]
+      },
+      {
+        "id": "LN-10",
+        "description": "Malformed email",
+        "email": "bad@@format",
+        "expectedError": ["valid email", "format", "invalid"]
+      }
+    ]
+  }, "signup": {
+    "positive": [
+      {
+        "id": "SP-01",
+        "description": "Valid registration",
+        "fullName": "rohit yadav",
+        "email": "rohit.test@enveu.com",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234"
+      },
+      {
+        "id": "SP-02",
+        "description": "Name with spaces",
+        "fullName": "John Michael Smith",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234"
+      },
+      {
+        "id": "SP-03",
+        "description": "Minimum 8 char password",
+        "fullName": "Bob Jones",
+        "password": "Test@123",
+        "confirmPassword": "Test@123"
+      },
+      {
+        "id": "SP-04",
+        "description": "Maximum 16 char password",
+        "fullName": "Sara Connor",
+        "password": "Test@1234567890",
+        "confirmPassword": "Test@1234567890"
+      },
+      {
+        "id": "SP-05",
+        "description": "Name with hyphen",
+        "fullName": "Anne-Marie Roy",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234"
+      }
+    ],
+    "negative": [
+      {
+        "id": "SN-06",
+        "description": "All fields empty",
+        "fullName": "",
+        "email": "",
+        "password": "",
+        "confirmPassword": "",
+        "expectedError":"valid email"
+
+      },
+      {
+        "id": "SN-07",
+        "description": "Invalid email format",
+        "fullName": "Test User",
+        "email": "notanemail",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedError": "valid email"
+      },
+      {
+        "id": "SN-08",
+        "description": "Password below 8 characters",
+        "fullName": "Test User",
+        "email": "UNIQUE",
+        "password": "abc",
+        "confirmPassword": "abc",
+        "expectedError": "8-16"
+      },
+      {
+        "id": "SN-09",
+        "description": "Passwords do not match",
+        "fullName": "Test User",
+        "email": "UNIQUE",
+        "password": "Test@1234",
+        "confirmPassword": "Test@9999",
+        "expectedError": "passwords do not match"
+      },
+      {
+        "id": "SN-10",
+        "description": "Already registered email",
+        "fullName": "Test User",
+        "email": "EXISTING",
+        "password": "Test@1234",
+        "confirmPassword": "Test@1234",
+        "expectedError": "already"
+      }
+    ]
+  }
+}
+
+ 
+
